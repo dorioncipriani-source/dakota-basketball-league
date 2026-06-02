@@ -4,31 +4,31 @@ const teams = [
   {
     name: "Minot Outlaws",
     slogan: "The Magic City's Most Wanted.",
-    logo: "/images/outlaws.png",
+    logo: "/images/outlaws.PNG",
     accent: "border-red-800",
   },
   {
     name: "Bismarck Capitalists",
     slogan: "Own the Standard.",
-    logo: "/images/capitalists.png",
+    logo: "/images/capitalists.PNG",
     accent: "border-yellow-600",
   },
   {
     name: "Fargo Reapers",
     slogan: "The Valley Reaps All.",
-    logo: "/images/reapers.png",
+    logo: "/images/reapers.PNG",
     accent: "border-purple-700",
   },
   {
     name: "Grand Forks Huskies",
     slogan: "Forged in Frost.",
-    logo: "/images/huskies.png",
+    logo: "/images/huskies.PNG",
     accent: "border-green-700",
   },
   {
     name: "Williston Roughnecks",
     slogan: "Fueled by Grit.",
-    logo: "/images/roughnecks.png",
+    logo: "/images/roughnecks.PNG",
     accent: "border-orange-700",
   },
 ];
