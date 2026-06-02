@@ -21,38 +21,11 @@ const faqs = [
   ["When is the projected launch?", "DBL is building toward its inaugural launch cycle beginning in 2026."],
   ["Can former college athletes play?", "Yes. Former collegiate players, strong amateur players, and qualified basketball talent are encouraged to submit interest."],
   ["How do sponsorships work?", "Businesses can participate through founding sponsorships, league partnerships, team sponsorships, branding opportunities, community partnerships, and future title integrations."],
-  ["Will DBL expand beyond five teams?", "Expansion is possible in future seasons depending on league growth, market demand, operational success, and sponsorship support."],
-  ["How can I stay updated?", "Follow future DBL social channels, news updates, and website announcements as the league develops."],
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/85 px-6 py-4 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <a href="#" className="flex items-center gap-3">
-            <Image src="/images/dbl-logo.png" alt="Dakota Basketball League logo" width={54} height={54} className="h-12 w-auto object-contain" priority />
-            <div>
-              <p className="text-lg font-black leading-none text-yellow-500">DBL</p>
-              <p className="hidden text-xs uppercase tracking-[0.25em] text-zinc-400 sm:block">Dakota Basketball League</p>
-            </div>
-          </a>
-
-          <div className="hidden items-center gap-7 text-sm font-bold uppercase tracking-wide text-zinc-300 md:flex">
-            <a href="#teams" className="hover:text-yellow-500">Teams</a>
-            <a href="#sponsorship" className="hover:text-yellow-500">Sponsors</a>
-            <a href="#players" className="hover:text-yellow-500">Players</a>
-            <a href="#faq" className="hover:text-yellow-500">FAQ</a>
-            <a href="#news" className="hover:text-yellow-500">News</a>
-            <a href="#contact" className="hover:text-yellow-500">Contact</a>
-          </div>
-
-          <a href="https://forms.gle/FwYjN3STJHo2hUSa7" target="_blank" className="rounded-full bg-yellow-500 px-5 py-3 text-sm font-black text-black hover:bg-yellow-400">
-            Sponsor DBL
-          </a>
-        </div>
-      </nav>
-
       <section className="relative flex min-h-[92vh] items-center justify-center border-b border-white/10 px-6 py-24 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(234,179,8,0.28),transparent_28%),radial-gradient(circle_at_20%_70%,rgba(127,29,29,0.28),transparent_30%),radial-gradient(circle_at_80%_70%,rgba(234,179,8,0.12),transparent_28%),linear-gradient(to_bottom,#070707,#000000)]" />
 
@@ -65,9 +38,18 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl">
-          <Image src="/images/dbl-logo.png" alt="Dakota Basketball League logo" width={420} height={420} className="mx-auto mb-8 h-52 w-auto object-contain drop-shadow-[0_0_40px_rgba(234,179,8,0.25)] md:h-72" priority />
+          <Image
+            src="/images/dbl-logo.png"
+            alt="Dakota Basketball League logo"
+            width={420}
+            height={420}
+            className="mx-auto mb-8 h-52 w-auto object-contain drop-shadow-[0_0_40px_rgba(234,179,8,0.25)] md:h-72"
+            priority
+          />
 
-          <p className="mb-5 text-sm font-black uppercase tracking-[0.45em] text-red-700">Built Different. Built Dakota.</p>
+          <p className="mb-5 text-sm font-black uppercase tracking-[0.45em] text-red-700">
+            Built Different. Built Dakota.
+          </p>
 
           <h1 className="mx-auto mb-6 max-w-5xl text-5xl font-black leading-none tracking-tight md:text-8xl">
             Dakota Basketball
@@ -82,7 +64,6 @@ export default function Home() {
             <a href="https://forms.gle/FwYjN3STJHo2hUSa7" target="_blank" className="rounded-lg bg-yellow-500 px-9 py-4 font-black text-black hover:bg-yellow-400">
               Become A Sponsor
             </a>
-
             <a href="https://forms.gle/n5BCKUD77MxgBpqH7" target="_blank" className="rounded-lg bg-red-900 px-9 py-4 font-black text-white hover:bg-red-800">
               Player Interest Form
             </a>
@@ -128,14 +109,14 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {teams.map((team) => (
-              <article key={team.name} className={`group rounded-3xl border ${team.border} bg-zinc-950 p-7 shadow-2xl ${team.glow} transition duration-300 hover:-translate-y-2 hover:bg-zinc-900`}>
+              <a key={team.name} href={`/teams/${team.name.toLowerCase().replaceAll(" ", "-")}`} className={`group rounded-3xl border ${team.border} bg-zinc-950 p-7 shadow-2xl ${team.glow} transition duration-300 hover:-translate-y-2 hover:bg-zinc-900`}>
                 <div className="mb-6 flex h-52 items-center justify-center rounded-2xl bg-black p-5">
                   <Image src={team.logo} alt={`${team.name} logo`} width={250} height={250} className="max-h-48 w-auto object-contain transition duration-300 group-hover:scale-110" />
                 </div>
                 <p className="mb-2 text-sm font-black uppercase tracking-[0.25em] text-yellow-500">{team.city}</p>
                 <h3 className="text-2xl font-black text-white">{team.name}</h3>
                 <p className="mt-3 text-zinc-300">{team.slogan}</p>
-              </article>
+              </a>
             ))}
           </div>
         </div>
@@ -164,8 +145,8 @@ export default function Home() {
           </div>
 
           <div className="mt-10 text-center">
-            <a href="https://forms.gle/FwYjN3STJHo2hUSa7" target="_blank" className="inline-block rounded-lg bg-yellow-500 px-9 py-4 font-black text-black hover:bg-yellow-400">
-              Start Sponsor Conversation
+            <a href="/sponsors" className="inline-block rounded-lg bg-yellow-500 px-9 py-4 font-black text-black hover:bg-yellow-400">
+              View Sponsorship Opportunities
             </a>
           </div>
         </div>
@@ -190,9 +171,6 @@ export default function Home() {
           <div className="mb-14 text-center">
             <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-800">Frequently Asked Questions</p>
             <h2 className="text-4xl font-black text-yellow-500 md:text-6xl">Questions About DBL</h2>
-            <p className="mx-auto mt-5 max-w-3xl text-zinc-400">
-              Everything players, sponsors, and community partners need to know about the DBL launch.
-            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -227,34 +205,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer id="contact" className="border-t border-white/10 bg-black px-6 py-12 text-center">
-        <Image src="/images/dbl-logo.png" alt="Dakota Basketball League logo" width={110} height={110} className="mx-auto mb-5 h-24 w-auto object-contain" />
-
-        <p className="text-xl font-black text-yellow-500">Dakota Basketball League</p>
-        <p className="mt-2 text-zinc-400">Built Different. Built Dakota.</p>
-
-        <div className="mt-8 space-y-3 text-sm text-zinc-400">
-          <p>
-            General Contact:
-            <span className="ml-2 text-yellow-500">DCipriani@dakotabasketballleague.org</span>
-          </p>
-
-          <p>
-            Player Relations:
-            <span className="ml-2 text-yellow-500">players@dakotabasketballleague.org</span>
-          </p>
-
-          <p>
-            Sponsorships:
-            <span className="ml-2 text-yellow-500">sponsors@dakotabasketballleague.org</span>
-          </p>
-
-          <p className="pt-4 text-zinc-500">
-            Sponsor inquiries • Player interest • Community partnerships
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }
