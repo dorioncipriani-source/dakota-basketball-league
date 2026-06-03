@@ -41,6 +41,16 @@ export default function Footer() {
           </span>
         </p>
 
+        <div className="pt-4">
+          <a
+            href="https://www.facebook.com/share/17Va8Vi7sr/?mibextid=wwXIfr"
+            target="_blank"
+            className="font-black text-yellow-500 hover:text-yellow-400"
+          >
+            Follow DBL on Facebook
+          </a>
+        </div>
+
         <p className="pt-4 text-zinc-500">
           Sponsor inquiries • Player interest • Community partnerships
         </p>
