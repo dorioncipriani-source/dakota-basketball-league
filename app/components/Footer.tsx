@@ -42,21 +42,29 @@ export default function Footer() {
         </p>
 
         <div className="pt-4 flex flex-col gap-2">
-  <a
-    href="https://www.facebook.com/share/17Va8Vi7sr/?mibextid=wwXIfr"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-black text-yellow-500 hover:text-yellow-400"
-  >
-    Follow DBL on Facebook
-  </a>
+          <a
+            href="https://www.facebook.com/share/17Va8Vi7sr/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-black text-yellow-500 hover:text-yellow-400"
+          >
+            Follow DBL on Facebook
+          </a>
 
-  <a
-    href="https://www.instagram.com/officialdakbl?igsh=MWxrYWpud25oYTlndg%3D%3D&utm_source=qr"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-black text-yellow-500 hover:text-yellow-400"
-  >
-    Follow DBL on Instagram
-  </a>
-</div>
+          <a
+            href="https://www.instagram.com/officialdakbl?igsh=MWxrYWpud25oYTlndg%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-black text-yellow-500 hover:text-yellow-400"
+          >
+            Follow DBL on Instagram
+          </a>
+        </div>
+
+        <p className="pt-4 text-zinc-500">
+          Sponsor inquiries • Player interest • Community partnerships
+        </p>
+      </div>
+    </footer>
+  );
+}
