@@ -1,6 +1,5 @@
 import Image from "next/image";
-
-export default function Footer() {
+import { FaFacebook, FaInstagram } from "react-icons/fa";export default function Footer() {
   return (
     <footer id="contact" className="border-t border-white/10 bg-black px-6 py-12 text-center">
       <Image
@@ -31,25 +30,25 @@ export default function Footer() {
           <span className="ml-2 text-yellow-500">sponsors@dakotabasketballleague.org</span>
         </p>
 
-        <div className="pt-4 flex flex-col gap-2">
-          <a
-            href="https://www.facebook.com/share/17Va8Vi7sr/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-black text-yellow-500 hover:text-yellow-400"
-          >
-            Follow DBL on Facebook
-          </a>
+       <div className="pt-4 flex justify-center gap-6 text-3xl">
+  <a
+    href="https://www.facebook.com/share/17Va8Vi7sr/?mibextid=wwXIfr"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-yellow-500 hover:text-yellow-400 transition"
+  >
+    <FaFacebook />
+  </a>
 
-          <a
-            href="https://www.instagram.com/officialdakbl?igsh=MWxrYWpud25oYTlndg%3D%3D&utm_source=qr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-black text-yellow-500 hover:text-yellow-400"
-          >
-            Follow DBL on Instagram
-          </a>
-        </div>
+  <a
+    href="https://www.instagram.com/officialdakbl?igsh=MWxrYWpud25oYTlndg%3D%3D&utm_source=qr"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-yellow-500 hover:text-yellow-400 transition"
+  >
+    <FaInstagram />
+  </a>
+</div>
 
         <p className="pt-4 text-zinc-500">
           Sponsor inquiries • Player interest • Community partnerships
