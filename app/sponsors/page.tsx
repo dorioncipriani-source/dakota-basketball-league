@@ -1,46 +1,62 @@
 const tiers = [
   {
-    name: "Founding Sponsor",
-    price: "$1,000–$5,000",
+    name: "MVP Founding Partner",
+    price: "$50,000+",
     items: [
-      "Launch partner recognition",
-      "Website sponsor visibility",
-      "Social media mentions",
-      "Sponsor appreciation graphics",
-      "Early DBL brand alignment",
+      "Official Partner designation",
+      "Exclusive industry/category protection",
+      "Logo on league website homepage",
+      "Logo on league-wide marketing materials",
+      "Premium social media recognition",
+      "Showcase Event presenting rights",
+      "Championship Event sponsorship rights",
+      "Premium venue signage",
+      "VIP hospitality package",
+      "Speaking opportunities",
+      "First-right renewal opportunities",
     ],
   },
   {
-    name: "Team Sponsor",
-    price: "$5,000–$10,000",
+    name: "Championship Partner",
+    price: "$25,000–$49,999",
     items: [
-      "Direct team alignment",
-      "Local market exposure",
-      "Team content integration",
-      "Potential apparel or patch visibility",
-      "Community activation opportunities",
+      "Major logo placement",
+      "Website sponsorship page",
+      "Social media recognition",
+      "Event signage",
+      "Showcase Event branding",
+      "VIP tickets and hospitality",
+      "Community event participation",
     ],
   },
   {
-    name: "League Partner",
-    price: "$10,000–$25,000",
+    name: "All-Star Partner",
+    price: "$10,000–$24,999",
     items: [
-      "League-wide brand exposure",
-      "Multi-team visibility",
-      "Event branding opportunities",
-      "Digital and media placement",
-      "Strategic partner positioning",
+      "Website recognition",
+      "Social media features",
+      "Event signage",
+      "Sponsor spotlight posts",
+      "VIP event access",
     ],
   },
   {
-    name: "Title Partner",
-    price: "$25,000–$50,000+",
+    name: "Community Partner",
+    price: "$5,000–$9,999",
     items: [
-      "Future naming rights potential",
-      "Premium league-wide placement",
-      "Major brand integration",
-      "Featured sponsor inventory",
-      "Custom partnership structure",
+      "Website listing",
+      "Social recognition",
+      "Event signage",
+      "Networking invitations",
+    ],
+  },
+  {
+    name: "Founding Supporter",
+    price: "$1,000–$4,999",
+    items: [
+      "Founding Sponsor designation",
+      "Website recognition",
+      "Social media acknowledgment",
     ],
   },
 ];
@@ -62,7 +78,7 @@ export default function SponsorsPage() {
           communities, athletes, fans, and businesses.
         </p>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tiers.map((tier) => (
             <div
               key={tier.name}
@@ -96,11 +112,23 @@ export default function SponsorsPage() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              ["Regional Exposure", "Reach fans and communities across multiple North Dakota markets."],
-              ["Local Alignment", "Connect your business with team identity, hometown pride, and community energy."],
-              ["Growth Opportunity", "Get involved early as DBL builds toward launch and long-term expansion."],
+              [
+                "Regional Exposure",
+                "Reach fans and communities across multiple North Dakota markets.",
+              ],
+              [
+                "Local Alignment",
+                "Connect your business with team identity, hometown pride, and community energy.",
+              ],
+              [
+                "Growth Opportunity",
+                "Get involved early as DBL builds toward launch and long-term expansion.",
+              ],
             ].map(([title, text]) => (
-              <div key={title} className="rounded-2xl border border-white/10 bg-black p-6">
+              <div
+                key={title}
+                className="rounded-2xl border border-white/10 bg-black p-6"
+              >
                 <h3 className="text-xl font-black text-white">{title}</h3>
                 <p className="mt-3 text-zinc-400">{text}</p>
               </div>
