@@ -201,7 +201,7 @@ export default function SponsorsPage() {
             Partnership Opportunities
           </h2>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-3xl border border-yellow-500/40 bg-zinc-950 p-8 text-center">
               <h3 className="text-xl font-black text-white">
                 Official Merchandise Partner
@@ -215,27 +215,72 @@ export default function SponsorsPage() {
                 className="mx-auto mt-6 max-h-24 w-auto object-contain"
               />
 
-              <p className="mt-4 text-yellow-500 font-black">
+              <p className="mt-4 font-black text-yellow-500">
                 FLM Visuals
               </p>
             </div>
 
-            {["Media Partner", "Venue Partner", "Community Partner"].map(
-              (partner) => (
-                <div
-                  key={partner}
-                  className="rounded-3xl border border-white/10 bg-zinc-950 p-8 text-center"
-                >
-                  <h3 className="text-xl font-black text-white">
-                    {partner}
-                  </h3>
+            {["Media Partner", "Venue Partner"].map((partner) => (
+              <div
+                key={partner}
+                className="rounded-3xl border border-white/10 bg-zinc-950 p-8 text-center"
+              >
+                <h3 className="text-xl font-black text-white">{partner}</h3>
 
-                  <p className="mt-4 text-zinc-400">
-                    Opportunity Available
-                  </p>
-                </div>
-              )
-            )}
+                <p className="mt-4 text-zinc-400">
+                  Opportunity Available
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-20">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-800">
+            Community Partners
+          </p>
+
+          <h2 className="text-4xl font-black text-yellow-500">
+            Building With The Community
+          </h2>
+
+          <p className="mt-4 max-w-3xl text-zinc-400">
+            DBL is proud to connect with community organizations that support
+            local events, athletes, and opportunities across North Dakota.
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-yellow-500/40 bg-zinc-950 p-8 text-center">
+              <Image
+                src="/images/NDMSBL.JPG"
+                alt="North Dakota Men's Summer Baseball League Logo"
+                width={260}
+                height={180}
+                className="mx-auto max-h-32 w-auto object-contain"
+              />
+
+              <h3 className="mt-6 text-xl font-black text-white">
+                North Dakota Men&apos;s Summer Baseball League
+              </h3>
+
+              <p className="mt-3 text-zinc-400">Community Partner</p>
+            </div>
+
+            <div className="rounded-3xl border border-yellow-500/40 bg-zinc-950 p-8 text-center">
+              <Image
+                src="/images/MissMagicCity.JPG"
+                alt="Miss Magic City Organization Logo"
+                width={260}
+                height={180}
+                className="mx-auto max-h-32 w-auto object-contain"
+              />
+
+              <h3 className="mt-6 text-xl font-black text-white">
+                Miss Magic City Organization
+              </h3>
+
+              <p className="mt-3 text-zinc-400">Community Partner</p>
+            </div>
           </div>
         </section>
 
