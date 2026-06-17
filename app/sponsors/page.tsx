@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const tiers = [
   {
     name: "MVP Founding Partner",
@@ -135,84 +137,112 @@ export default function SponsorsPage() {
             ))}
           </div>
         </section>
-{/* Current Sponsors */}
 
-<section className="mt-20">
-  <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-800">
-    Current Sponsors
-  </p>
-
-  <h2 className="text-4xl font-black text-yellow-500">
-    Founding Sponsor Positions Available
-  </h2>
-
-  <p className="mt-4 max-w-3xl text-zinc-400">
-    Founding Sponsors receive permanent recognition as inaugural partners
-    of the Dakota Basketball League.
-  </p>
-
-  <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-    {[
-      "Position Available",
-      "Position Available",
-      "Position Available",
-      "Position Available",
-      "Position Available",
-    ].map((slot) => (
-      <div
-        key={slot + Math.random()}
-        className="flex min-h-[180px] items-center justify-center rounded-3xl border border-dashed border-yellow-500/40 bg-zinc-950 p-6 text-center"
-      >
-        <div>
-          <p className="text-sm font-black uppercase tracking-widest text-red-800">
-            Founding Sponsor
+        <section className="mt-20">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-800">
+            Current Sponsors
           </p>
 
-          <p className="mt-3 text-lg font-black text-zinc-300">
-            {slot}
+          <h2 className="text-4xl font-black text-yellow-500">
+            Founding Sponsors
+          </h2>
+
+          <p className="mt-4 max-w-3xl text-zinc-400">
+            Founding Sponsors receive permanent recognition as inaugural
+            partners of the Dakota Basketball League.
           </p>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
 
-{/* Official Partners */}
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+            <div className="flex min-h-[210px] items-center justify-center rounded-3xl border border-yellow-500/40 bg-zinc-950 p-6 text-center">
+              <div>
+                <p className="mb-4 text-sm font-black uppercase tracking-widest text-red-800">
+                  Founding Sponsor
+                </p>
 
-<section className="mt-20">
-  <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-800">
-    Official Partners
-  </p>
+                <Image
+                  src="/images/FLM.png"
+                  alt="FLM Visuals Logo"
+                  width={240}
+                  height={160}
+                  className="mx-auto max-h-32 w-auto object-contain"
+                />
 
-  <h2 className="text-4xl font-black text-yellow-500">
-    Partnership Opportunities
-  </h2>
+                <p className="mt-4 text-lg font-black text-yellow-500">
+                  FLM Visuals
+                </p>
+              </div>
+            </div>
 
-  <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-    {[
-      "Merchandise Partner",
-      "Media Partner",
-      "Venue Partner",
-      "Community Partner",
-    ].map((partner) => (
-      <div
-        key={partner}
-        className="rounded-3xl border border-white/10 bg-zinc-950 p-8 text-center"
-      >
-        <h3 className="text-xl font-black text-white">
-          {partner}
-        </h3>
+            {[1, 2, 3, 4].map((slot) => (
+              <div
+                key={slot}
+                className="flex min-h-[210px] items-center justify-center rounded-3xl border border-dashed border-yellow-500/40 bg-zinc-950 p-6 text-center"
+              >
+                <div>
+                  <p className="text-sm font-black uppercase tracking-widest text-red-800">
+                    Founding Sponsor
+                  </p>
 
-        <p className="mt-4 text-zinc-400">
-          Opportunity Available
-        </p>
-      </div>
-    ))}
-  </div>
-</section>
+                  <p className="mt-3 text-lg font-black text-zinc-300">
+                    Position Available
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-20">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-800">
+            Official Partners
+          </p>
+
+          <h2 className="text-4xl font-black text-yellow-500">
+            Partnership Opportunities
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-3xl border border-yellow-500/40 bg-zinc-950 p-8 text-center">
+              <h3 className="text-xl font-black text-white">
+                Official Merchandise Partner
+              </h3>
+
+              <Image
+                src="/images/FLM.png"
+                alt="FLM Visuals Logo"
+                width={220}
+                height={140}
+                className="mx-auto mt-6 max-h-24 w-auto object-contain"
+              />
+
+              <p className="mt-4 text-yellow-500 font-black">
+                FLM Visuals
+              </p>
+            </div>
+
+            {["Media Partner", "Venue Partner", "Community Partner"].map(
+              (partner) => (
+                <div
+                  key={partner}
+                  className="rounded-3xl border border-white/10 bg-zinc-950 p-8 text-center"
+                >
+                  <h3 className="text-xl font-black text-white">
+                    {partner}
+                  </h3>
+
+                  <p className="mt-4 text-zinc-400">
+                    Opportunity Available
+                  </p>
+                </div>
+              )
+            )}
+          </div>
+        </section>
+
         <a
           href="https://forms.gle/FwYjN3STJHo2hUSa7"
           target="_blank"
+          rel="noopener noreferrer"
           className="mt-12 inline-block rounded-lg bg-yellow-500 px-9 py-4 font-black text-black hover:bg-yellow-400"
         >
           Submit Sponsor Inquiry
