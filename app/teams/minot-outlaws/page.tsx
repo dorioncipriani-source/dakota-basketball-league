@@ -54,6 +54,7 @@ export default function MinotOutlawsPage() {
                 alt="Minot Outlaws Logo"
                 width={500}
                 height={500}
+                priority
                 className="max-h-[500px] w-auto object-contain drop-shadow-[0_0_40px_rgba(220,38,38,0.35)]"
               />
             </div>
@@ -91,11 +92,42 @@ export default function MinotOutlawsPage() {
               </h2>
 
               <p className="mt-5 leading-8 text-zinc-400">
-                Roster announcements, schedule releases, jersey concepts, team
-                sponsors, and franchise news coming soon.
+                Roster announcements, schedule releases, jersey concepts,
+                additional team sponsors, and franchise news coming soon.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-black px-6 py-24">
+        <div className="mx-auto max-w-7xl text-center">
+          <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-700">
+            Official Team Sponsor
+          </p>
+
+          <h2 className="text-4xl font-black text-yellow-500 md:text-6xl">
+            Proudly Sponsored By
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-zinc-300">
+            The Minot Outlaws are proud to partner with SRT Communications as
+            our Official Team Sponsor.
+          </p>
+
+          <div className="mx-auto mt-12 max-w-2xl rounded-3xl border border-yellow-500/40 bg-white p-10">
+            <Image
+              src="/images/SRT.PNG"
+              alt="SRT Communications Logo"
+              width={500}
+              height={220}
+              className="mx-auto max-h-36 w-auto object-contain"
+            />
+          </div>
+
+          <p className="mt-6 text-xl font-black text-white">
+            SRT Communications
+          </p>
         </div>
       </section>
 
