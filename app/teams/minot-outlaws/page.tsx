@@ -103,31 +103,55 @@ export default function MinotOutlawsPage() {
       <section className="border-y border-white/10 bg-black px-6 py-24">
         <div className="mx-auto max-w-7xl text-center">
           <p className="mb-3 text-sm font-black uppercase tracking-[0.35em] text-red-700">
-            Official Team Sponsor
+            Team Sponsors
           </p>
 
           <h2 className="text-4xl font-black text-yellow-500 md:text-6xl">
-            Proudly Sponsored By
+            Proud Partners of the Minot Outlaws
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-zinc-300">
-            The Minot Outlaws are proud to partner with SRT Communications as
-            our Official Team Sponsor.
+            Our team sponsors help make Outlaws basketball possible through
+            their commitment to the community and support of local athletics.
           </p>
 
-          <div className="mx-auto mt-12 max-w-2xl rounded-3xl border border-yellow-500/40 bg-white p-10">
-            <Image
-              src="/images/SRT.PNG"
-              alt="SRT Communications Logo"
-              width={500}
-              height={220}
-              className="mx-auto max-h-36 w-auto object-contain"
-            />
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
+            <div className="rounded-3xl border border-yellow-500/40 bg-white p-10">
+              <Image
+                src="/images/SRT.PNG"
+                alt="SRT Communications"
+                width={450}
+                height={180}
+                className="mx-auto max-h-36 w-auto object-contain"
+              />
+
+              <h3 className="mt-8 text-2xl font-black text-black">
+                SRT Communications
+              </h3>
+
+              <p className="mt-2 font-bold text-zinc-600">
+                Official Team Sponsor
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-yellow-500/40 bg-white p-10">
+              <Image
+                src="/images/arikarafr.JPG"
+                alt="Arikara Fitness & Recreation"
+                width={450}
+                height={180}
+                className="mx-auto max-h-36 w-auto object-contain"
+              />
+
+              <h3 className="mt-8 text-2xl font-black text-black">
+                Arikara Fitness & Recreation
+              </h3>
+
+              <p className="mt-2 font-bold text-zinc-600">
+                Official Team Sponsor
+              </p>
+            </div>
           </div>
-
-          <p className="mt-6 text-xl font-black text-white">
-            SRT Communications
-          </p>
         </div>
       </section>
 
